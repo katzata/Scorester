@@ -1,0 +1,58 @@
+.scoreFieldContainer {
+    position: relative;
+    width: 100%;
+    height: 26px;
+    margin: 2px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &:last-of-type {
+        margin-bottom: 60px;
+    }
+    
+    .scoreFieldEffect {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 120%;
+        transform: translateY(-50%);
+        transition-duration: .08s;
+        border: 1px solid rgba(0, 0, 0, .1);
+        border: 1px solid rgba(199, 199, 199, .1);
+        background-color: rgba(199, 199, 199, .1);
+    }
+
+    .scoreField {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-right: 1.906158357771261vw;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 26px;
+        color: #c7c7c7;
+        text-align: right;
+        transition-duration: .08s;
+        border-radius: 0;
+        border: none;
+        z-index: 1;
+    }
+
+    .scoreField::selection {
+        color: #d6d6d6;
+        background:rgba(199, 199, 199, .1)
+    }
+
+    .scoreField::-webkit-outer-spin-button,
+    .scoreField::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+
+
+// .scoreField[type=number] {
+// 	z-appearance: textfield;
+// }

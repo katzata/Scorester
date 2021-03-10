@@ -1,0 +1,27 @@
+{
+    "app": {
+        "languages": {
+            "type": "select",
+            "value": [
+                "bg",
+                "en"
+            ]
+        }
+    },
+    "game": {
+        "numberOfPlayers": {
+            "type": "select",
+            "value": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        "timerOn": {
+            "type": "toggle",
+            "value": false
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+	"gameSettings": {
+		"numberOfPlayers": "Брой играчи",
+		"timerOn": "Таймер",
+		"languages": "Езици"
+	},
+	"header": {
+		"appInfo": {
+			"version": "1.0",
+			"techStack": [
+				"Използвани технологии :",
+				"React",
+				"Redux",
+				"PHP",
+				"MySQL"
+			]
+		}
+	},
+	"scoreSection": {
+		"submitInput": "Въведи"
+	}
+}

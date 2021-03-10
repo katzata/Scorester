@@ -1,0 +1,35 @@
+.closeButtonContainer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+
+    .closeButtonColumn1, .closeButtonColumn2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 90%;
+        background-color: white;
+        border-radius: 1px;
+    }
+
+    .closeButtonColumn1 {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .closeButtonColumn2 {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .closeButton {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        z-index: 1;
+    }
+}

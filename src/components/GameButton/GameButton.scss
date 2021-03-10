@@ -1,0 +1,19 @@
+.button	{
+	width: 100%;
+	height: 100%;
+	background-color: greenyellow;
+	font-size: 18px;
+	text-shadow: 0 0 1px white;
+	transition-duration: .08s;
+	box-shadow: inset 0 0 2px 1px black;
+	border-top: none;
+	border-right: 2px solid #818181;
+	border-bottom: 2px solid #818181;
+	border-left: 2px solid #818181;
+	user-select: none;
+}
+
+.button:active {
+	box-shadow: inset 0 0 3px 2px black;
+	font-size: 17px;
+}

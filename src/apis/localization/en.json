@@ -1,0 +1,56 @@
+{
+	"header": {
+		"menu": "MENU"
+	},
+	"menu": {
+		"login": {
+			"Titles": ["Username", "Password", "Email"],
+			"toggleText": {
+				"register": "If you don't have an account you can ",
+				"login": "If you already have an account you can "
+			}
+		},
+		"gameSettings": {
+			"titles": [
+				"Number of players",
+				"Game session timer"
+			],
+			"numberOfPlayers": [
+				"Player",
+				"Players"
+			],
+			"checkboxTitles": [
+				"Game session timer"
+			]
+		},
+		"appSettings": {
+			"titles": [
+				"Language"
+			]
+		}
+	},
+	"gameButton": {
+		"start": "START",
+		"end": "END",
+		"yes": "Yes",
+		"no": "No"
+	},
+	"pauseGameButton": {
+		"pause": "PAUSE",
+		"resume": "RESUME"
+	},
+	"columnModalButtons": {
+		"enter": "Enter",
+		"edit": "Edit",
+		"delete": "Delete"
+	},
+	"resultsModal": {
+		"titles": {
+			"playerScores": "Player Scores"
+		},
+		"buttons": {
+			"save": "Save",
+			"ok": "Ok"
+		}
+	}
+}

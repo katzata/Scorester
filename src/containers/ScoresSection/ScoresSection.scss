@@ -1,0 +1,33 @@
+.scoresSection {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .columnInputContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: red;
+
+        .columnInput {
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
+
+        .submitInput {
+            margin: 0 auto;
+        }
+    }
+
+    .scoresContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}

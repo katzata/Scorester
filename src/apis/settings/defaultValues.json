@@ -1,0 +1,20 @@
+{
+    "app": {
+        "languages": "bg",
+        "infoVisible": false,
+        "optionsModalVisible": false,
+        "columnInputsVisible": [
+            false,
+            false
+        ]
+    },
+    "game": {
+        "numberOfPlayers": "2",
+        "timerOn": false
+    },
+    "session": {
+        "names": ["asd", "dsa"],
+        "scores": [[], []],
+        "timeElapsed": 0
+    }
+}

@@ -1,0 +1,15 @@
+export const appSettings = {
+    TOGGLE_INFO: "TOGGLE_INFO",
+    TOGGLE_MODAL: "TOGGLE_MODAL"
+};
+
+export const gameSettings = {
+    SET_NUMBER_OF_PLAYERS: "SET_NUMBER_OF_PLAYERS"
+};
+
+export const session = {
+    NUMBER_OF_PLAYERS_CHANGED: "NUMBER_OF_PLAYERS_CHANGED",
+    SET_PLAYER_NAME: "SET_PLAYER_NAME",
+    SET_SCORES: "SET_SCORES",
+    SET_TIME_ELAPSED: "SET_TIME_ELAPSED"
+};

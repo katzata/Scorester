@@ -1,0 +1,24 @@
+header {
+	position: relative;
+	border: 1px solid white;
+	
+	.appInfoContainer {
+		position: absolute;
+		right: 8px;
+		top: 6px;
+	}
+
+	.optionsButton {
+		position: absolute;
+		right: 8px;
+		bottom: 8px;
+		width: 18px;
+		height: 18px;
+		border: none;
+		background-color: transparent;
+		background-image: url("../../assets/icons/gear.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+}

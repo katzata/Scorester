@@ -1,0 +1,32 @@
+.appInfo {
+    position: absolute;
+    right: 0;
+    top: calc( 100% + 3px );
+    width: 88px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    color: #c7c7c7;
+    font-size: 13px;
+    line-height: 13px;
+    background-color: black;
+    box-shadow: 0 0 4px 3px black;
+    transition-duration: .15s;
+    z-index: 2;
+
+    .appVersion {
+        margin-bottom: 6px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .techInfo {
+        margin-bottom: 2px;
+
+        @for $i from 3 through 6 {
+            &:nth-child(#{$i}) {
+                margin-left: 3px;
+            }
+        }
+    }
+}
