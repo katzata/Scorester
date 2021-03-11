@@ -23,7 +23,7 @@ const SettingsModal = ({visible}) => {
 
     return <div className="settingsModal" style={styles}>
         <div className="settingsModalInternal">
-            <CloseButton />
+            <CloseButton action={"TOGGLE_MODAL"} />
             <UserInfo />
 
             <OptionsSection />

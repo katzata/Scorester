@@ -3,12 +3,14 @@ import "./NameField.scss";
 import { connect } from "react-redux";
 
 const NameField = ({ currentNames, fieldIndex, setPlayerName }) => {
-    return <input
-        className="nameField"
-        type="text"
-        defaultValue={currentNames[fieldIndex]}
-        onBlur={(e) => setPlayerName(fieldIndex, e.target.value)}
-    />
+    return <div className="playerNameContainer">
+        <input
+            className="nameField"
+            type="text"
+            defaultValue={currentNames[fieldIndex]}
+            onBlur={(e) => setPlayerName(fieldIndex, e.target.value)}
+        />
+    </div>
 }
 
 const mapStateToProps = state => {

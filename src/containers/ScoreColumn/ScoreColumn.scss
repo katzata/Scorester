@@ -1,45 +1,11 @@
 .scoreColumn {
-    // width: 50%;
-    // height: 50%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 40px auto 40px;
-    color: #c7c7c7;
+    grid-template-rows: 35px calc(100% - 63px) 28px;
     border-right: 1px solid #818181;
     border-top: 2px solid #818181;
 
     &:last-of-type {
         border-right: none;
-    }
-
-    .playerNameContainer {
-        width: 100%;
-        height: 40px;
-        display: flex;
-        border-bottom: 1px solid #818181;
-    }
-
-    .scoresContainer {
-        padding-top: 2px;
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    .scoresContainer::-webkit-scrollbar {
-        display: none;
-    }
-
-    .scoresTotalContainer {
-        width: 100%;
-        height: 40px;
-        display: flex;
-        border-top: 1px solid #818181;
-
-        span {
-            margin: auto 10px auto auto;
-        }
     }
 }

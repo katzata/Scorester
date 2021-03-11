@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 
 import ScoreColumn from "../ScoreColumn/ScoreColumn";
 
-const ScoreColumnsContainer = ({ playerScores, numberOfPlayers }) => {
-
+const ScoreColumnsContainer = ({ numberOfPlayers }) => {
     return <section className="scoreColumnsContainer">
         {
             [...Array(Number(numberOfPlayers)).keys()].map((idx) => {

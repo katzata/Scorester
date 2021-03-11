@@ -12,48 +12,50 @@ const reducer = (state = initialState, action) => {
         let tempNames = state.names;
         let tempScores = state.scores;
         
-        const tempState = {
-            names: state.names,
-            scores: state.scores
-        }
-        
         if (action.numberOfPlayers < state.scores.length) {
+            tempNames.splice(action.numberOfPlayers);
             tempScores.splice(action.numberOfPlayers);
         } else {
             while (state.scores.length < action.numberOfPlayers) {
+                tempNames.push("");
                 tempScores.push([]);
             };
         }
         
         return {
             ...state,
-            scores: tempScores,
+            // names: tempNames,
+            scores: tempScores
         }
     };
 
     if (action.type === actions.session.SET_PLAYER_NAME) {
-        console.log(state.names)
-        let tempNames = state.names.splice(action.index, 1, action.name)
-        console.log(tempNames)
+        let tempNames = state.names;
+        tempNames[action.index] = action.name;
+
         return {
             ...state,
-            names: state.names.splice(action.index, 1, action.name)
+            names: tempNames
         }
     };
 
-    if (action.type === actions.session.SET_SCORES) {
-        console.log(action.data)
-        return {
-            ...state,
-            scores: []
+    if (action.type === actions.session.ADD_PLAYER_SCORE) {
+        if (action.score !== "") {
+            let tempScores = state.scores;
+            tempScores[action.index].push(action.score)
+
+            return {
+                ...state,
+                scores: tempScores
+            }
         }
     };
 
-    if (action.type === actions.session.SET_TIME_ELAPSED) {
-        console.log(action.data)
+    if (action.type === actions.session.EDIT_PLAYER_SCORE) {
+        console.log(action)
+
         return {
-            ...state,
-            timeElapsed: 2
+            ...state
         }
     };
 

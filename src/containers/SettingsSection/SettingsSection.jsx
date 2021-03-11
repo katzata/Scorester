@@ -3,23 +3,54 @@ import "./SettingsSection.scss";
 import { connect } from "react-redux";
 
 import ToggleButton from "../../components/ToggleButton/ToggleButton";
-import OptionSelect from "../../components/SettingsSelect/SettingsSelect";
+import SettingsSelect from "../../components/SettingsSelect/SettingsSelect";
 
-const SettingsSection = ({ settingValues, currentLanguage }) => {
+const SettingsSection = ({ currentLanguage }) => {
     const language = require(`../../apis/localization/${currentLanguage}.json`).gameSettings;
     const settings = require(`../../apis/settings/settings.json`);
 
-    return <div className="optionsContainer">
+    const dispatchActions = {
+        app: {
+            currentLanguage: "",
+            infoVisible: "TOGGLE_INFO",
+            optionsModalVisible: "TOGGLE_MODAL",
+            columnInputsVisible: ""
+        },
+        game: {
+            numberOfPlayers: "SET_NUMBER_OF_PLAYERS",
+            timerOn: "TOGGLE_TIMER",
+            unlockScoreFields: "UNLOCK_SCORE_FIELDS"
+        }
+    }
+
+    const handleSettingType = (setting, idx) => {
+        const titles = Object.keys(settings.game);
+        const appp = Object.keys(settings.app);
+
+        if (setting.type === "select") {
+            return <SettingsSelect
+                action={titles[idx]}
+                options={setting.value}
+            />;
+        };
+
+        if (setting.type === "toggle") {
+            return <ToggleButton
+                target={titles[idx]}
+                action={dispatchActions.game[titles[idx]]}
+            />;
+        };
+    }
+
+    return <div className="settingsContainer">
         {
             Object.values(settings.game).map((setting, idx) => {
-                return <div className="option" key={Object.keys(settings)[idx]}>
-                    <span className="optionTitle">{language[Object.keys(settings.game)[idx]]}</span>
+                return <div className="setting" key={Object.keys(settings.game)[idx]}>
+                    <span className="settingTitle">
+                        {language[Object.keys(settings.game)[idx]]}
+                    </span>
 
-                    {
-                        setting.type === "select" ?
-                        <OptionSelect targetAction={Object.keys(settings.game)[idx]} options={setting.value} /> :
-                        <ToggleButton target={Object.keys(settings.game)[idx]} />
-                    }
+                    { handleSettingType(setting, idx) }
                 </div>
             })
         }
@@ -28,8 +59,7 @@ const SettingsSection = ({ settingValues, currentLanguage }) => {
 
 const mapStateToProps = state => {
     return {
-        currentLanguage: state.appSettings.currentLanguage,
-        settingValues: state.gameSettings
+        currentLanguage: state.appSettings.currentLanguage
     };
 };
 

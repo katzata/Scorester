@@ -1,9 +1,18 @@
-.nameField {
+.playerNameContainer {
     width: 100%;
-    margin: auto;
-    background-color: transparent;
-    border: none;
-    font-size: 13px;
-    text-align: center;
-    color: #c7c7c7;
+    height: 100%;
+    display: flex;
+    background-color: rgba(99, 10, 0, 0.3);
+    border-bottom: 1px solid #818181;
+    
+    .nameField {
+        width: 100%;
+        margin: auto;
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        color: #c7c7c7;
+        font-weight: bold;
+    }
 }

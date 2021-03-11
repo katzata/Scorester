@@ -1,8 +1,11 @@
 {
+	"appSettings": {
+		"languages": "Езици"
+	},
 	"gameSettings": {
 		"numberOfPlayers": "Брой играчи",
 		"timerOn": "Таймер",
-		"languages": "Езици"
+		"unlockScoreFields": "Отключи полетата за резултати"
 	},
 	"header": {
 		"appInfo": {
@@ -17,6 +20,8 @@
 		}
 	},
 	"scoreSection": {
-		"submitInput": "Въведи"
+		"addInput": "Добави",
+		"submitInput": "Въведи",
+		"cancelInput": "Откажи"
 	}
 }

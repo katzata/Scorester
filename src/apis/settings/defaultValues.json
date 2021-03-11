@@ -9,12 +9,13 @@
         ]
     },
     "game": {
-        "numberOfPlayers": "2",
-        "timerOn": false
+        "numberOfPlayers": "6",
+        "timerOn": false,
+        "unlockScoreFields": false
     },
     "session": {
-        "names": ["asd", "dsa"],
-        "scores": [[], []],
+        "names": ["asd", "dsa", "aaa", "sss", "ddd", "xxx"],
+        "scores": [[1, 2], [], [], [], [], []],
         "timeElapsed": 0
     }
 }

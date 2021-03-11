@@ -9,6 +9,11 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action) => {
+    if (action.type === actions.appSettings.SET_LANGUAGE) return {
+        ...state,
+        currentLanguage: `${action.data}`
+    };
+    
     if (action.type === actions.appSettings.TOGGLE_INFO) return {
         ...state,
         infoVisible: !state.infoVisible

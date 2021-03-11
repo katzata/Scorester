@@ -21,7 +21,11 @@
         },
         "timerOn": {
             "type": "toggle",
-            "value": false
+            "value": null
+        },
+        "unlockScoreFields": {
+            "type": "toggle",
+            "value": null
         }
     }
 }

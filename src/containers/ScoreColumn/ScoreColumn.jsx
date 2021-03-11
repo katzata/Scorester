@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import NameField from "../../components/NameField/NameField";
 import ScoresSection from "../ScoresSection/ScoresSection";
-
+import ScoresTotal from "../../components/ScoresTotal/ScoresTotal";
 
 const ScoreColumn = ({ columnIndex, numberOfPlayers, scores}) => {
     let styles = {
@@ -19,27 +19,20 @@ const ScoreColumn = ({ columnIndex, numberOfPlayers, scores}) => {
         };
     };
 
-    console.log(scores[columnIndex].length)
-
     return <div className="scoreColumn" style={styles}>
-        <div className="playerNameContainer">
-            <NameField fieldIndex={columnIndex} />
-        </div>
-
-        <ScoresSection scores={scores[columnIndex]} columnIndex={columnIndex} />
-        
-        <div className="scoresTotalContainer">
-            <span>{scores.reduce((a, b) => Number(a) + Number(b), 0)}</span>
-        </div>
+        <NameField fieldIndex={columnIndex} />
+        <ScoresSection columnIndex={columnIndex} />
+        <ScoresTotal scores={scores} columnIndex={columnIndex}/>
     </div>
 }
 
 const mapStateToProps = state => {
-    console.log(state.sessionData.scores)
+    const newScores = [...state.sessionData.scores];
+    
     return {
         numberOfPlayers: state.gameSettings.numberOfPlayers,
-        scores: state.sessionData.scores
+        scores: newScores
     };
 };
 
-export default connect(mapStateToProps)(ScoreColumn);
+export default connect(mapStateToProps, null)(ScoreColumn);

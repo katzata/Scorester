@@ -1,0 +1,53 @@
+
+.addScoreButtonContainer {
+    position: absolute;
+    left: -1px;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: auto 25px;
+    grid-template-rows: 40px;
+    transform: translate(0, 17px);
+    border: 1px solid white;
+    border-top-right-radius: 20px;
+    color: white;
+    overflow: hidden;
+    
+    .addScoreButton {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+    }
+    
+    .addScoreButtonText {
+        padding: 2px 0 0 5px;
+    }
+
+    .addScoreButtonPlus {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .iconSide1, .iconSide2 {
+            position: absolute;
+            left: 42%;
+            top: 31%;
+            background-color: white;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .iconSide1 {
+            width: 2px;
+            height: 11px;
+        }
+
+        .iconSide2 {
+            width: 11px;
+            height: 2px;
+        }
+    }
+}
